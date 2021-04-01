@@ -34,7 +34,7 @@ public class Demo02 {
             }
             for(int i=0;i<c1.length;i++){
                 if(c1.length!=c2.length)
-                {temp = false;break;}
+                {temp = false;break;    }
                 temp = c1[i]==c2[i]? true :false;
             }
             result[index++] = temp;

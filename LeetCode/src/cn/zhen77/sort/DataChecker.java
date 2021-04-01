@@ -26,8 +26,9 @@ public class DataChecker {
         int[] arr2 = new int[arr.length];
         System.arraycopy(arr, 0, arr2, 0, arr.length);
         Arrays.sort(arr2);
-        QuickSort.sort(arr,0,arr.length-1);
+//        QuickSort.sort(arr,0,arr.length-1);
 //        MergeSort.sort(arr,0,arr.length-1);
+        HeapSort.heapSort(arr);
 
 
         boolean result = true;
