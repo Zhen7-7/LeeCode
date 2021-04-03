@@ -29,7 +29,8 @@ public class DataChecker {
 //        QuickSort.sort(arr,0,arr.length-1);
 //        MergeSort.sort(arr,0,arr.length-1);
 //        HeapSort.heapSort(arr);
-        SelectionSort.sort(arr);
+//        SelectionSort.sort(arr);
+        SelectionSort.sortPlus(arr);
 
 
         boolean result = true;

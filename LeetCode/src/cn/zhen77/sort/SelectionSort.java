@@ -1,5 +1,7 @@
 package cn.zhen77.sort;
 
+import com.sun.media.sound.MidiInDeviceProvider;
+
 import java.nio.channels.DatagramChannel;
 
 /**
@@ -17,11 +19,13 @@ public class SelectionSort {
     * */
     public static void main(String[] args) {
         DataChecker.checker();
-        /*int[] arr = {1,2,3};
-        swap(arr,0,0);
+        /*int[] arr = {6,5,4,3,2,1};
+        sortPlus(arr);
+       *//* swap(arr,0,0);*//*
         for (int i:arr){
-            System.out.println( i);
+            System.out.print( i+" ");
         }*/
+
     }
     public  static void sort(int[] arr){
         for(int i=0;i<arr.length;i++){
@@ -31,6 +35,23 @@ public class SelectionSort {
             }
             swap(arr,i,minPointer);
         }
+    }
+    public static void sortPlus(int[] arr){
+        for (int i =0;i<arr.length>>1;i++){
+            int minPointer=i;
+            int maxPointer=arr.length-i-1;
+
+            for(int j=i;j<arr.length-i;j++){
+                minPointer = arr[j]<arr[minPointer]?j: minPointer;
+            }
+            swap(arr,i,minPointer);
+            for (int j=arr.length-i-1;j>i;j--){
+                maxPointer = arr[j]>arr[maxPointer]?j: maxPointer;
+            }
+            swap(arr,arr.length-i-1,maxPointer);
+
+        }
+
     }
     public static void swap(int[] arr,int a, int b){
         int temp = arr[a];
