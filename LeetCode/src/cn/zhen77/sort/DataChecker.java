@@ -30,8 +30,8 @@ public class DataChecker {
 //        MergeSort.sort(arr,0,arr.length-1);
 //        HeapSort.heapSort(arr);
 //        SelectionSort.sort(arr);
-        SelectionSort.sortPlus(arr);
-
+//        SelectionSort.sortPlus(arr);
+        BubbleSort.sort(arr);
 
         boolean result = true;
         for(int i=0;i<arr.length-1;i++){
